@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Week 8 Lab</title>
+	  <!-- add the link tag to the style.css which will be in a folder -->
+		<link rel="stylesheet" href="./css/style.css">
+	</head>
+
+	<body>
+		
+		<form id="myForm">
+      <label>Enter your name:</label>
+      <input type="text" id="demo3">
+      <button type="button" onclick="usingValue();" name="button">Click me</button>
+    </form>
+    <h1 id="userName"></h1>
+
+		<!-- add your JavaScript inside the section below -->
+	  <script type="text/javascript">
+			//this is a comment in JS
+			//add 3 examples of JavaScript code
+
+			var guess = prompt("Guess a number between 1 and 10:");
+			var parsedGuess =  parseInt(guess);
+
+			var secretNumber = 7;
+
+			if (parsedGuess == secretNumber) {
+				document.write("congrats youve won!")
+			} else if (parsedGuess > secretNumber) {
+				document.write("guess lower")
+			} else if (parsedGuess < secretNumber) {
+				document.write("guess higher")
+			}
+
+			var age = prompt("Please enter age:");
+      var parsedAge =  parseInt(age);
+
+      var speed = prompt("Please enter speed:");
+      var parsedSpeed =  parseInt(speed);
+
+
+      if ( (age < 17) && (speed > 80) ) {
+        document.write("<br>" + "this user recieves 2 penalty points");
+      }else{
+        document.write("<br>" + "this user is following the law");
+      }
+
+			function usingValue(){
+				var name = document.getElementById('demo3');
+				document.getElementById('userName').innerHTML = "<br>" + "Hello " +  name.value;
+				document.getElementById('myForm').style.display = none;
+				}
+		</script>
+	</body>
+</html>
